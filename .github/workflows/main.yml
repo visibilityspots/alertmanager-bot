@@ -36,10 +36,3 @@ jobs:
           push: true
           tags: |
             visibilityspots/alertmanager-bot:latest
-
-      - name: Update dockerhub description based on README.md file
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: visibilityspots/alertmanager-bot
